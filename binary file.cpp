@@ -5,13 +5,6 @@ using namespace std;
 //#include <aeslib.h>
 #include <aeslib.c>
 
-
-//this is also nice:
-//https://www.lri.fr/~fmartignon/documenti/systemesecurite/5-AES.pdf
-
-//Shit taken from here:
-//https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
-
 int main(int argc, char *argv[])
 {
     /*std::string *state    = new string("Bulk copy");
