@@ -94,42 +94,10 @@ the last 4 bits individuate the column) in Rijndael S-Box*/
 void AES(char *state, char* key)
 {
 
-	char ** text[3] [3];
-	char ** round_key[3][3];
-	//Was too lazy to thing for loop
-	//Puts text and keys into matrix, will be useful in future operations
-	text[0][0] = state[0];
-	text[0][1] = state[4];
-	text[0][2] = state[8];
-	text[0][3] = state[12];
-	text[1][0] = state[1];
-	text[1][1] = state[5];
-	text[1][2] = state[9];
-	text[1][3] = state[13];
-	text[2][0] = state[2];
-	text[2][1] = state[6];
-	text[2][2] = state[10];
-	text[2][3] = state[14];
-	text[3][0] = state[3];
-	text[3][1] = state[7];
-	text[3][2] = state[11];
-	text[3][3] = state[15]; 
-	round_key[0][0] = key[0];
-	round_key[0][1] = key[4];
-	round_key[0][2] = key[8];
-	round_key[0][3] = key[12];
-	round_key[1][0] = key[1];
-	round_key[1][1] = key[5];
-	round_key[1][2] = key[9];
-	round_key[1][3] = key[13];
-	round_key[2][0] = key[2];
-	round_key[2][1] = key[6];
-	round_key[2][2] = key[10];
-	round_key[2][3] = key[14];
-	round_key[3][0] = key[3];
-	round_key[3][1] = key[7];
-	round_key[3][2] = key[11];
-	round_key[3][3] = key[15];
+	char ** text[4] [4];
+	char ** round_key[4][4];
+	//Need to copy values into matrix 4x4
+
     for(int i=0; i<9 ;i++){
         SubBtyes(state);
         ShiftRows(state);
